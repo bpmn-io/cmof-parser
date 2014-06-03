@@ -1,0 +1,48 @@
+{
+  "name": "cmof-parser",
+  "version": "0.0.1",
+  "description": "A parser for CMOF xml files",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bpmn-io/cmof-parser"
+  },
+  "keywords": [
+    "model",
+    "meta-model",
+    "xml",
+    "xsd",
+    "import",
+    "export"
+  ],
+  "author": {
+    "name": "Nico Rehwaldt",
+    "url": "https://github.com/Nikku"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.0",
+    "grunt-contrib-connect": "~0.6.0",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-jsdoc": "~0.5.1",
+    "grunt-jasmine-node": "~0.2.1",
+    "grunt-release": "^0.7.0",
+    "load-grunt-tasks": "~0.3.0",
+    "jsondiffpatch": "~0.1.4",
+    "lodash": "~2.4.0",
+    "sax": "~0.6.0"
+  },
+  "peerDependencies": {
+    "lodash": "~2.4.0",
+    "sax": "~0.6.0"
+  },
+  "dependencies": {
+    "tiny-stack": "^0.1.0"
+  }
+}
