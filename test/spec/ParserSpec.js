@@ -3,7 +3,7 @@
 var _ = require('lodash');
 var fs = require('fs');
 
-var Parser = require('../../lib/Parser');
+var Parser = require('../..');
 var Helper = require('./Helper');
 
 
