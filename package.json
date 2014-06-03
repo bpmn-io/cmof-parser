@@ -1,6 +1,6 @@
 {
   "name": "cmof-parser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A parser for CMOF xml files",
   "directories": {
     "lib": "lib"
