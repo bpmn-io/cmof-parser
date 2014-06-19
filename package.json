@@ -34,15 +34,11 @@
     "grunt-jasmine-node": "~0.2.1",
     "grunt-release": "^0.7.0",
     "load-grunt-tasks": "~0.3.0",
-    "jsondiffpatch": "~0.1.4",
-    "lodash": "~2.4.0",
-    "sax": "~0.6.0"
-  },
-  "peerDependencies": {
-    "lodash": "~2.4.0",
-    "sax": "~0.6.0"
+    "jsondiffpatch": "~0.1.4"
   },
   "dependencies": {
+    "lodash": "~2.4.0",
+    "sax": "~0.6.0",
     "tiny-stack": "^0.1.0"
   }
 }
