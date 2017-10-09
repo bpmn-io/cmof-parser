@@ -1,9 +1,8 @@
 'use strict';
 
-var _ = require('lodash');
 var fs = require('fs');
 
-var Parser = require('../..');
+var Parser = require('../../');
 var Helper = require('./Helper');
 
 

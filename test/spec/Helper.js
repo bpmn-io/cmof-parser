@@ -1,6 +1,7 @@
 'use strict';
 
-var _ = require('lodash'),
+var cloneDeep = require('lodash/cloneDeep'),
+    isEqual = require('lodash/isEqual'),
     inspect = require('util').inspect;
 
 var jsondiffpatch = require('jsondiffpatch').create({
@@ -20,11 +21,11 @@ function addMatchers() {
 
       // jasmine 1.3.x
       var actual = this.actual;
-      var actualClone = _.cloneDeep(actual);
-      var expectedClone = _.cloneDeep(expected);
+      var actualClone = cloneDeep(actual);
+      var expectedClone = cloneDeep(expected);
 
       var result = {
-        pass: _.isEqual(actualClone, expectedClone)
+        pass: isEqual(actualClone, expectedClone)
       };
 
       if (!result.pass) {
