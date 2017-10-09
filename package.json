@@ -6,6 +6,7 @@
     "lib": "lib"
   },
   "scripts": {
+    "all": "grunt",
     "test": "grunt test"
   },
   "repository": {
@@ -27,13 +28,14 @@
   "license": "MIT",
   "devDependencies": {
     "grunt": "~0.4.2",
-    "grunt-contrib-watch": "~0.5.0",
+    "grunt-cli": "^1.2.0",
     "grunt-contrib-connect": "~0.6.0",
     "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-watch": "~0.5.0",
     "grunt-jasmine-node": "~0.2.1",
     "grunt-release": "^0.7.0",
-    "load-grunt-tasks": "~0.3.0",
-    "jsondiffpatch": "~0.1.4"
+    "jsondiffpatch": "~0.1.4",
+    "load-grunt-tasks": "~0.3.0"
   },
   "dependencies": {
     "lodash": "^4.17.4",
