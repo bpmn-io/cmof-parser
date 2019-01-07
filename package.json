@@ -32,12 +32,12 @@
     "grunt-contrib-jshint": "~0.7.2",
     "grunt-contrib-watch": "~0.5.0",
     "grunt-jasmine-node": "^0.3.1",
-    "grunt-release": "^0.7.0",
+    "grunt-release": "^0.14.0",
     "jsondiffpatch": "~0.1.4",
     "load-grunt-tasks": "~0.3.0"
   },
   "dependencies": {
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.11",
     "sax": "~0.6.0",
     "tiny-stack": "^0.1.0"
   }
