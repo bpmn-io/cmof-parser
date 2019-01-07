@@ -1,12 +1,11 @@
 'use strict';
 
+var { expect } = require('chai');
+
 var Parser = require('../..');
-var Helper = require('./Helper');
 
 
 describe('import CMOF', function() {
-
-  beforeEach(Helper.addMatchers);
 
   function parsed(file, callback) {
     return function(done) {
@@ -31,7 +30,7 @@ describe('import CMOF', function() {
     var elementsById = results.byId;
 
     var pkg = elementsById['_0'];
-    expect(pkg.prefix).toEqual('bpmn');
+    expect(pkg.prefix).to.eql('bpmn');
   }));
 
 
@@ -58,7 +57,7 @@ describe('import CMOF', function() {
          association: 'A_artifacts_subProcess' } ]
     };
 
-    expect(subProcess).toDeepEqual(expected);
+    expect(subProcess).to.deep.eql(expected);
   }));
 
 
@@ -79,7 +78,7 @@ describe('import CMOF', function() {
       ]
     };
 
-    expect(loopType).toDeepEqual(expected);
+    expect(loopType).to.deep.eql(expected);
   }));
 
 
@@ -100,7 +99,7 @@ describe('import CMOF', function() {
       ]
     };
 
-    expect(shape).toDeepEqual(expected);
+    expect(shape).to.deep.eql(expected);
   }));
 
 
@@ -121,7 +120,7 @@ describe('import CMOF', function() {
       ]
     };
 
-    expect(flowNode).toDeepEqual(expected);
+    expect(flowNode).to.deep.eql(expected);
   }));
 
 
@@ -146,7 +145,7 @@ describe('import CMOF', function() {
       ]
     };
 
-    expect(flowNode).toDeepEqual(expected);
+    expect(flowNode).to.deep.eql(expected);
   }));
 
 
@@ -165,7 +164,7 @@ describe('import CMOF', function() {
       ]
     };
 
-    expect(shape).toDeepEqual(expected);
+    expect(shape).to.deep.eql(expected);
   }));
 
 });
