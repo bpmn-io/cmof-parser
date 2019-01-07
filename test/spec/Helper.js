@@ -5,7 +5,7 @@ var cloneDeep = require('lodash/cloneDeep'),
     inspect = require('util').inspect;
 
 var jsondiffpatch = require('jsondiffpatch').create({
-  objectHash: function (obj) {
+  objectHash: function(obj) {
     return JSON.stringify(obj);
   }
 });

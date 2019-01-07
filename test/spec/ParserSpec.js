@@ -1,8 +1,6 @@
 'use strict';
 
-var fs = require('fs');
-
-var Parser = require('../../');
+var Parser = require('../..');
 var Helper = require('./Helper');
 
 
@@ -49,15 +47,15 @@ describe('import CMOF', function() {
       superClass: [ 'Activity', 'FlowElementsContainer' ],
       properties:
        [ { id: 'SubProcess-triggeredByEvent',
-           name: 'triggeredByEvent',
-           isAttr: true,
-           default: false,
-           type: 'Boolean' },
-         { name: 'artifacts',
-           id: 'SubProcess-artifacts',
-           type: 'Artifact',
-           isMany: true,
-           association: 'A_artifacts_subProcess' } ]
+         name: 'triggeredByEvent',
+         isAttr: true,
+         default: false,
+         type: 'Boolean' },
+       { name: 'artifacts',
+         id: 'SubProcess-artifacts',
+         type: 'Artifact',
+         isMany: true,
+         association: 'A_artifacts_subProcess' } ]
     };
 
     expect(subProcess).toDeepEqual(expected);
