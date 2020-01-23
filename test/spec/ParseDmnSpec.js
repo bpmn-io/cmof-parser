@@ -13,7 +13,7 @@ const parserOptions = {
     'DI': 'di',
     'http://www.omg.org/spec/BMM/20130801/BMM.xmi': 'bmm',
     'http://www.omg.org/spec/BPMN/20100501/BPMN20.cmof': 'bpmn',
-    'https://www.omg.org/spec/DMN/20180521/DMNDI12.xmi': 'di'
+    'https://www.omg.org/spec/DMN/20191111/DMNDI13.xmi': 'dmndi'
   }
 };
 
@@ -32,7 +32,7 @@ describe('DMN', function() {
     it('should parse package', async function() {
 
       // given
-      const file = readFile('test/fixtures/xmi/DMN12.xmi');
+      const file = readFile('test/fixtures/xmi/DMN13.xmi');
 
       // when
       const { elementsByType } = await parseFile(file, parserOptions);
@@ -41,14 +41,14 @@ describe('DMN', function() {
       const pkg = elementsByType[ 'uml:Package' ][ 0 ];
 
       expect(pkg.prefix).to.equal('dmn');
-      expect(pkg.uri).to.equal('http://www.omg.org/spec/DMN/20180521/DMN12');
+      expect(pkg.uri).to.equal('https://www.omg.org/spec/DMN/20191111/DMN13');
     });
 
 
     it('dmn:DRGElement (complex-attr-reference)', async function() {
 
       // given
-      const file = readFile('test/fixtures/xmi/DMN12.xmi');
+      const file = readFile('test/fixtures/xmi/DMN13.xmi');
 
       // when
       const { elementsByType } = await parseFile(file, parserOptions);
@@ -79,7 +79,7 @@ describe('DMN', function() {
     it('Package', async function() {
 
       // given
-      const file = readFile('test/fixtures/xmi/DMNDI12.xmi');
+      const file = readFile('test/fixtures/xmi/DMNDI13.xmi');
 
       // when
       const { elementsByType } = await parseFile(file, parserOptions);
@@ -88,7 +88,7 @@ describe('DMN', function() {
       const pkg = elementsByType[ 'uml:Package' ][ 0 ];
 
       expect(pkg.prefix).to.equal('dmndi');
-      expect(pkg.uri).to.equal('https://www.omg.org/spec/DMN/20180521/DMNDI12');
+      expect(pkg.uri).to.equal('https://www.omg.org/spec/DMN/20191111/DMNDI13');
     });
 
   });
