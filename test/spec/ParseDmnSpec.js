@@ -91,6 +91,28 @@ describe('DMN', function() {
       expect(pkg.uri).to.equal('https://www.omg.org/spec/DMN/20191111/DMNDI13');
     });
 
+
+    it('should set <isId> for DMNStyle#id', async function() {
+
+      // given
+      const file = readFile('test/fixtures/xmi/DMNDI13.xmi');
+
+      // when
+      const { elementsByType } = await parseFile(file, parserOptions);
+
+      // then
+      const pkg = elementsByType[ 'uml:Package' ][ 0 ];
+
+      const dmnStyle = pkg.types.find(({ name }) => name === 'DMNStyle'),
+            id = dmnStyle.properties.find(({ name }) => name === 'id');
+
+      expect(id).to.eql({
+        name: 'id',
+        isAttr: true,
+        type: 'String',
+        isId: true
+      });
+    });
   });
 
 });
