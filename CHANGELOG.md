@@ -6,7 +6,9 @@ All notable changes to [cmof-parser](https://github.com/bpmn-io/bpmn-moddle) are
 
 ___Note:__ Yet to be released changes appear here._
 
-* `FEAT`: refactor ([#3](https://github.com/bpmn-io/cmof-parser/pull/3))
+## 0.5.0
+
+* `FEAT`: refactor parser ([#3](https://github.com/bpmn-io/cmof-parser/pull/3))
 
 ## ...
 
