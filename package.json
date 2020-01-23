@@ -1,7 +1,7 @@
 {
   "name": "cmof-parser",
   "version": "0.4.0",
-  "description": "A parser for CMOF xml files",
+  "description": "Parse MOF XMI and UML XMI files",
   "directories": {
     "lib": "lib"
   },
@@ -27,6 +27,12 @@
     "name": "Nico Rehwaldt",
     "url": "https://github.com/Nikku"
   },
+  "contributors": [
+    {
+      "name": "bpmn.io contributors",
+      "url": "https://github.com/bpmn-io"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.2.0",
