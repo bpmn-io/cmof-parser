@@ -40,6 +40,7 @@ describe('DMN', function() {
       // then
       const pkg = elementsByType[ 'uml:Package' ][ 0 ];
 
+      expect(pkg.name).to.equal('DMN');
       expect(pkg.prefix).to.equal('dmn');
       expect(pkg.uri).to.equal('https://www.omg.org/spec/DMN/20191111/DMN13');
     });

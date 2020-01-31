@@ -39,6 +39,7 @@ describe('BPMN', function() {
       // then
       const pkg = elementsByType[ 'cmof:Package' ][ 0 ];
 
+      expect(pkg.name).to.equal('BPMN20');
       expect(pkg.prefix).to.equal('bpmn');
       expect(pkg.uri).to.equal('http://www.omg.org/spec/BPMN/20100524/MODEL');
     });
