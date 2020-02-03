@@ -1,6 +1,6 @@
 {
   "name": "cmof-parser",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Parse MOF XMI and UML XMI files",
   "directories": {
     "lib": "lib"
