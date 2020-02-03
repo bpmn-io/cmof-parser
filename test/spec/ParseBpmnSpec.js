@@ -189,6 +189,51 @@ describe('BPMN', function() {
       expect(flowNode).to.deep.eql(expected);
     });
 
+
+    it('should add xmi:type=Association to associations', async function() {
+
+      // given
+      const file = readFile('test/fixtures/cmof/BPMN20.cmof');
+
+      // when
+      const { elementsById } = await parseFile(file, parserOptions);
+
+      // then
+      const shape = elementsById[ 'A_errorRefs_operation' ];
+
+      expect(shape).to.exist;
+    });
+
+
+    it('should add xmi:type=Class to types', async function() {
+
+      // given
+      const file = readFile('test/fixtures/cmof/BPMN20.cmof');
+
+      // when
+      const { elementsById } = await parseFile(file, parserOptions);
+
+      // then
+      const shape = elementsById[ 'Interface' ];
+
+      expect(shape).to.exist;
+    });
+
+
+    it('should add xmi:type=Enumeration to enumerations', async function() {
+
+      // given
+      const file = readFile('test/fixtures/cmof/BPMN20.cmof');
+
+      // when
+      const { elementsById } = await parseFile(file, parserOptions);
+
+      // then
+      const shape = elementsById[ 'ItemKind' ];
+
+      expect(shape).to.exist;
+    });
+
   });
 
 
@@ -280,6 +325,40 @@ describe('BPMN', function() {
       const shape = elementsById[ 'Shape' ];
 
       expect(shape).to.deep.eql(expected);
+    });
+
+  });
+
+
+  describe('DC', function() {
+
+    it('should add xmi:type=DataType to types', async function() {
+
+      // given
+      const file = readFile('test/fixtures/cmof/DC.cmof');
+
+      // when
+      const { elementsById } = await parseFile(file, parserOptions);
+
+      // then
+      const shape = elementsById[ 'Point' ];
+
+      expect(shape).to.exist;
+    });
+
+
+    it('should add xmi:type=PrimitiveType to types', async function() {
+
+      // given
+      const file = readFile('test/fixtures/cmof/DC.cmof');
+
+      // when
+      const { elementsById } = await parseFile(file, parserOptions);
+
+      // then
+      const shape = elementsById[ 'Font' ];
+
+      expect(shape).to.exist;
     });
 
   });
