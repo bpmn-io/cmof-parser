@@ -1,6 +1,6 @@
 # cmof-parser
 
-[![Build Status](https://travis-ci.org/bpmn-io/cmof-parser.svg?branch=master)](https://travis-ci.org/bpmn-io/cmof-parser)
+[![Build Status](https://travis-ci.com/bpmn-io/cmof-parser.svg?branch=master)](https://travis-ci.com/bpmn-io/cmof-parser)
 
 Parse MOF XMI (https://www.omg.org/mof/) and UML XMI (https://www.omg.org/spec/UML) files.
 
