@@ -6,6 +6,8 @@ All notable changes to [cmof-parser](https://github.com/bpmn-io/bpmn-moddle) are
 
 ___Note:__ Yet to be released changes appear here._
 
+* `DEPS`: update to `min-dash@4.2.3`
+
 ## 0.5.2
 
 * `FIX`: add elements of type DataType to types ([`002506`](https://github.com/bpmn-io/cmof-parser/commit/00250678bdabeebefe75ffbb2b6472d2319290cd))
