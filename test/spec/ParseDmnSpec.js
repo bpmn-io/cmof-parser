@@ -46,6 +46,18 @@ describe('DMN', function() {
     });
 
 
+    it('should parse DMN 1.6 XMI', async function() {
+      // given
+      const file = readFile('test/fixtures/xmi/DMN16.xmi');
+
+      // when
+      const { elementsByType } = await parseFile(file, parserOptions);
+      // then
+      const pkg = elementsByType[ 'uml:Package' ][ 0 ];
+      expect(pkg.name).to.equal('DMN');
+    });
+
+
     it('dmn:DRGElement (complex-attr-reference)', async function() {
 
       // given
@@ -90,6 +102,17 @@ describe('DMN', function() {
 
       expect(pkg.prefix).to.equal('dmndi');
       expect(pkg.uri).to.equal('https://www.omg.org/spec/DMN/20191111/DMNDI13');
+    });
+
+
+    it('should parse DMNDI 1.5', async function() {
+      // given
+      const file = readFile('test/fixtures/xmi/DMNDI15.xmi');
+      // when
+      const { elementsByType } = await parseFile(file, parserOptions);
+      // then
+      const pkg = elementsByType[ 'uml:Model' ][ 0 ];
+      expect(pkg.name).to.equal('DMNDI');
     });
 
 
