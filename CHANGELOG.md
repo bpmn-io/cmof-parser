@@ -8,6 +8,7 @@ ___Note:__ Yet to be released changes appear here._
 
 * `DEPS`: update to `min-dash@4.2.3`
 * `DEPS`: update to `sax@1.6.1`
+* `DEPS`: update to `tiny-stack@2.0.1`
 
 ## 0.5.2
 
