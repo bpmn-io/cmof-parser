@@ -7,6 +7,7 @@ All notable changes to [cmof-parser](https://github.com/bpmn-io/bpmn-moddle) are
 ___Note:__ Yet to be released changes appear here._
 
 * `DEPS`: update to `min-dash@4.2.3`
+* `DEPS`: update to `sax@1.6.1`
 
 ## 0.5.2
 
