@@ -44,6 +44,6 @@
   "dependencies": {
     "min-dash": "^4.2.3",
     "sax": "^1.6.1",
-    "tiny-stack": "^0.1.0"
+    "tiny-stack": "^2.0.1"
   }
 }
